@@ -9,8 +9,30 @@ function App() {
           <Dictionary />
         </main>
         <footer>
-          This dictionary app was designed and coded by Sai Satti, is
-          open-sourced on GitHub and hosted on Netlify
+          This dictionary app was designed and coded by{" "}
+          <a
+            href="https://github.com/Sai-S-Mc"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Sai Satti
+          </a>{" "}
+          , is{" "}
+          <a
+            href="https://github.com/Sai-S-Mc/project-11-dictionary-app"
+            target="_blank"
+            rel="noreferrer"
+          >
+            open-sourced on GitHub
+          </a>{" "}
+          and hosted on{" "}
+          <a
+            href="https://project-11-dictionary-app.netlify.app/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Netlify
+          </a>
         </footer>
       </div>
     </div>
