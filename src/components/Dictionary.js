@@ -1,12 +1,13 @@
 import { useState } from "react";
 import axios from "axios";
+import SearchResults from "./SearchResults";
 
 export default function Dictionary() {
   const [word, setWord] = useState("");
+  const [results, setResults] = useState(null);
 
   function handleApiResonse(response) {
-    console.log(response.data)
-
+    setResults(response.data);
   }
 
   function captureInput(event) {
@@ -32,6 +33,7 @@ export default function Dictionary() {
         />
         <input type="submit" value="Search" />
       </form>
+      <SearchResults results={results} />
     </div>
   );
 }
