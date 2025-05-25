@@ -5,7 +5,8 @@ export default function Dictionary() {
   const [word, setWord] = useState("");
 
   function handleApiResonse(response) {
-    console.log(response.data);
+    console.log(response.data)
+
   }
 
   function captureInput(event) {
@@ -14,8 +15,7 @@ export default function Dictionary() {
 
   function handleSubmit(event) {
     event.preventDefault();
-    const apiKey = "tbfob32e017e01391b34fe15b81ad2a6";
-    const apiUrl = ` https://api.shecodes.io/dictionary/v1/define?word=${word}&key=${apiKey}`;
+    const apiUrl = ` https://api.dictionaryapi.dev/api/v2/entries/en/${word}`;
     axios.get(apiUrl).then(handleApiResonse);
   }
 
