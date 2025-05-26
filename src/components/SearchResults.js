@@ -7,15 +7,16 @@ export default function SearchResults({ results }) {
     let word = results[0].word;
     let phonetic = results[0].phonetic;
     let pronunciation;
-    if (results[0].phonetics[0].audio !== "") {
-      pronunciation = results[0].phonetics[0].audio;
-    } else if (results[0].phonetics[1].audio !== "") {
-      pronunciation = results[0].phonetics[1].audio;
-    } else if (results[0].phonetics[2].audio !== "") {
-      pronunciation = results[0].phonetics[2].audio;
-    } else {
-      return null;
+    console.log(results[0].phonetics.length);
+
+    for (let i = 0; i < results[0].phonetics.length; i++) {
+      if (results[0].phonetics) {
+        if (results[0].phonetics[i].audio !== "") {
+          pronunciation = results[0].phonetics[i].audio;
+        }
+      }
     }
+
     return (
       <div className="SearchResults">
         {results.map((result, index) => {

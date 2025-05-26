@@ -7,15 +7,11 @@ export default function ResultBlock({
   phonetic,
   pronunciation,
 }) {
- 
   return (
     <div className="ResultBlock" key={index}>
       <h3 className="text-capitalize">{word}</h3>
       <p>
-        {phonetic}{" "}
-        <a href={pronunciation}>
-          {pronunciation !== "" ? "listen" : null}
-        </a>{" "}
+        {phonetic} {pronunciation ? <a href={pronunciation}>listen</a> : null}{" "}
       </p>
       {result.meanings.map((meaning, index) => {
         if (index >= 0 && index < 3) {

@@ -15,6 +15,7 @@ export default function Dictionary() {
   }
 
   function handleSubmit(event) {
+    console.log("apiCalled")
     event.preventDefault();
     const apiUrl = ` https://api.dictionaryapi.dev/api/v2/entries/en/${word}`;
     axios.get(apiUrl).then(handleApiResonse);
