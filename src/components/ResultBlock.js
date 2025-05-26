@@ -3,18 +3,17 @@ import DefinitionBlock from "./DefinitionBlock";
 
 export default function ResultBlock({
   result,
-  results,
   index,
   word,
   phonetic,
   pronunciation,
 }) {
-  const [audioUrl, setAudioUrl] = useState(null);
+  const [audioUrl, setAudioUrl] = useState("");
   const audioRef = useRef(null);
 
   useEffect(() => {
-    setAudioUrl(pronunciation);
-  }, [pronunciation]);
+    setAudioUrl(pronunciation)
+  }, [result, pronunciation]);
 
   function playPronunciation() {
     if (audioRef.current) {
@@ -27,7 +26,7 @@ export default function ResultBlock({
       <button onClick={playPronunciation}>Listen</button>
       <audio ref={audioRef} src={audioUrl}>
         Your browser does not support the audio element.
-      </audio>{" "}
+      </audio>
     </span>
   );
 
@@ -35,7 +34,7 @@ export default function ResultBlock({
     <div className="ResultBlock" key={index}>
       <h3 className="text-capitalize">{word}</h3>
       <p>
-        {phonetic} {pronunciation !== null ? audioButton : null}
+        {phonetic} {audioUrl !== "" ? audioButton : null}
       </p>
       {result.meanings.map((meaning, index) => {
         if (index >= 0 && index < 3) {
