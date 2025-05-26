@@ -5,7 +5,7 @@ export default function DefinitionSynonyms({ definition }) {
         {" "}
         Synonyms:
         {definition.synonyms.map((synonym, index) => {
-          return <span className="btn">{synonym}</span>;
+          return <span className="btn" key={index}>{synonym}</span>;
         })}
       </div>
     );
