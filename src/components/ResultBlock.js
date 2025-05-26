@@ -3,6 +3,7 @@ import DefinitionBlock from "./DefinitionBlock";
 
 export default function ResultBlock({
   result,
+  results,
   index,
   word,
   phonetic,
@@ -13,7 +14,7 @@ export default function ResultBlock({
 
   useEffect(() => {
     setAudioUrl(pronunciation);
-  }, [phonetic]);
+  }, [pronunciation]);
 
   function playPronunciation() {
     if (audioRef.current) {
@@ -34,7 +35,7 @@ export default function ResultBlock({
     <div className="ResultBlock" key={index}>
       <h3 className="text-capitalize">{word}</h3>
       <p>
-        {phonetic} {pronunciation !== "" ? audioButton : null}
+        {phonetic} {pronunciation !== null ? audioButton : null}
       </p>
       {result.meanings.map((meaning, index) => {
         if (index >= 0 && index < 3) {
