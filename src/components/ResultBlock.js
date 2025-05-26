@@ -1,16 +1,22 @@
 import DefinitionBlock from "./DefinitionBlock";
 
-export default function ResultBlock({ result, index, word }) {
-  // let word;
-  // let phonetic;
-  // if (index === 0) {
-  //   word = result.word;
-  //   phonetic = result.phonetic;
-  // }
+export default function ResultBlock({
+  result,
+  index,
+  word,
+  phonetic,
+  pronunciation,
+}) {
+ 
   return (
     <div className="ResultBlock" key={index}>
       <h3 className="text-capitalize">{word}</h3>
-      {/* <p>{phonetic}</p> */}
+      <p>
+        {phonetic}{" "}
+        <a href={pronunciation}>
+          {pronunciation !== "" ? "listen" : null}
+        </a>{" "}
+      </p>
       {result.meanings.map((meaning, index) => {
         if (index >= 0 && index < 3) {
           return (
@@ -19,8 +25,9 @@ export default function ResultBlock({ result, index, word }) {
               <ul>
                 {meaning.definitions.map((definition, index) => {
                   if (index >= 0 && index < 3) {
-                    return <DefinitionBlock definition={definition} key={index} />;
-                    
+                    return (
+                      <DefinitionBlock definition={definition} key={index} />
+                    );
                   } else {
                     return null;
                   }
