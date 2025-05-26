@@ -6,17 +6,17 @@ export default function SearchResults({ results }) {
   if (results) {
     let word = results[0].word;
     let phonetic = results[0].phonetic;
-    let pronunciation;
+    let pronunciation = "";
     console.log(results[0].phonetics.length);
 
-    for (let i = 0; i < results[0].phonetics.length; i++) {
-      if (results[0].phonetics) {
+    if (results[0].phonetics) {
+      for (let i = 0; i < results[0].phonetics.length; i++) {
         if (results[0].phonetics[i].audio !== "") {
           pronunciation = results[0].phonetics[i].audio;
         }
+        
       }
     }
-
     return (
       <div className="SearchResults">
         {results.map((result, index) => {
