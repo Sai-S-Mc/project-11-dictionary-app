@@ -19,8 +19,8 @@ export default function ResultBlock({ result, index }) {
               <h4>{meaning.partOfSpeech}</h4>
               <ul>
                 {meaning.definitions.map((definition, index) => {
-                  if (index >= 0 && index < 2) {
-                    return <DefinitionBlock definition={definition} index={index} />;
+                  if (index >= 0 && index < 3) {
+                    return <DefinitionBlock definition={definition} key={index} />;
                     
                   } else {
                     return null;

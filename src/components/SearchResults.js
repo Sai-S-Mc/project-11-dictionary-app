@@ -9,7 +9,7 @@ export default function SearchResults({ results }) {
         {results.map((result, index) => {
           console.log(result);
           if (index >= 0 && index < 4) {
-            return <ResultBlock result={result} index={index} />;
+            return <ResultBlock result={result} key={index} />;
           } else {
             return null;
           }
