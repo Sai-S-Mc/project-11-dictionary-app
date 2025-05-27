@@ -1,0 +1,42 @@
+.Dictionary form {
+  padding: 20px 0;
+  perspective: 800px;
+  text-align: center;
+}
+
+.Dictionary .input-field,
+.Dictionary .search-btn {
+  padding: 5px 10px;
+  border-radius: var(--border-radius);
+  border: none;
+  box-shadow: var(--box-shadow);
+}
+
+.Dictionary .input-field {
+  margin-right: 5px;
+  color: var(--primary-text-color);
+}
+
+.Dictionary .input-field:focus {
+  outline: none;
+  border: 1px solid #a68576;
+}
+
+.Dictionary .input-field::placeholder {
+  color: #a68576;
+  opacity: 0.6;
+  font-size: smaller;
+}
+
+.Dictionary .search-btn {
+  background-color: #a68576;
+  border: 1px solid #a68576;
+  color: white;
+  transition: all ease-in-out 400ms;
+}
+
+.Dictionary .search-btn:hover {
+  color: var(--primary-text-color);
+  background-color: #ffffff;
+  transform: rotateX(360deg);
+}

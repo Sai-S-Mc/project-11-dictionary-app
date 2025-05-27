@@ -1,6 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 import SearchResults from "./SearchResults";
+import "../styles/Dictionary.css"
 
 export default function Dictionary() {
   const [word, setWord] = useState("Garden");
@@ -21,11 +22,12 @@ export default function Dictionary() {
     const apiUrl = ` https://api.dictionaryapi.dev/api/v2/entries/en/${word}`;
     axios.get(apiUrl).then(handleApiResonse);
   }
+  console.log(results)
 
   if (results) {
     return (
       <div className="Dictionary">
-        <h1>Dictionary</h1>
+        <h1 className="text-center mt-3">Dictionary</h1>
 
         <form onSubmit={handleSubmit}>
           <input
@@ -34,8 +36,10 @@ export default function Dictionary() {
             placeholder="Type a word"
             defaultValue={word}
             onChange={captureInput}
+            className="input-field"
+            
           />
-          <input type="submit" value="Search" />
+          <input type="submit" value="Search" className="search-btn" />
         </form>
         <SearchResults results={results} />
       </div>
