@@ -3,7 +3,7 @@ import axios from "axios";
 import SearchResults from "./SearchResults";
 
 export default function Dictionary() {
-  const [word, setWord] = useState("");
+  const [word, setWord] = useState("Garden");
   const [results, setResults] = useState(null);
 
   function handleApiResonse(response) {
@@ -15,25 +15,32 @@ export default function Dictionary() {
   }
 
   function handleSubmit(event) {
-    event.preventDefault();
+    if (event) {
+      event.preventDefault();
+    }
     const apiUrl = ` https://api.dictionaryapi.dev/api/v2/entries/en/${word}`;
     axios.get(apiUrl).then(handleApiResonse);
   }
 
-  return (
-    <div className="Dictionary">
-      <h1>Dictionary</h1>
+  if (results) {
+    return (
+      <div className="Dictionary">
+        <h1>Dictionary</h1>
 
-      <form onSubmit={handleSubmit}>
-        <input
-          type="search"
-          autoFocus
-          placeholder="Type a word"
-          onChange={captureInput}
-        />
-        <input type="submit" value="Search" />
-      </form>
-      <SearchResults results={results} />
-    </div>
-  );
+        <form onSubmit={handleSubmit}>
+          <input
+            type="search"
+            autoFocus
+            placeholder="Type a word"
+            defaultValue={word}
+            onChange={captureInput}
+          />
+          <input type="submit" value="Search" />
+        </form>
+        <SearchResults results={results} />
+      </div>
+    );
+  } else {
+    handleSubmit();
+  }
 }

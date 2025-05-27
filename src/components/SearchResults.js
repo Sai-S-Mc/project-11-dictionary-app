@@ -11,7 +11,7 @@ export default function SearchResults({ results }) {
     setPronunciation({ status: false, pronunciationUrl: "" });
   }, [results]);
 
-  if (results) {
+ 
     let word = results[0].word;
     let phonetic = results[0].phonetic;
 
@@ -49,7 +49,4 @@ export default function SearchResults({ results }) {
         })}
       </div>
     );
-  } else {
-    return null
-  }
-}
+  } 
