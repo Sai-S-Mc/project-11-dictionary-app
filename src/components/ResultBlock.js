@@ -20,7 +20,7 @@ export default function ResultBlock({
       audioRef.current.play();
     }
   }
-
+  
   let audioButton = (
     <span>
       <button onClick={playPronunciation}>Listen</button>
@@ -30,12 +30,22 @@ export default function ResultBlock({
     </span>
   );
 
+  let heading;
+   if(index === 0){
+    heading = (
+      <div>
+        <h3 className="text-capitalize">{word}</h3>
+        <p>
+          {phonetic} {audioUrl !== "" ? audioButton : null}
+        </p>
+      </div>
+    );
+   }
+
+
   return (
-    <div className="ResultBlock" key={index}>
-      <h3 className="text-capitalize">{word}</h3>
-      <p>
-        {phonetic} {audioUrl !== "" ? audioButton : null}
-      </p>
+    <div className="ResultBlock">
+      {heading}
       {result.meanings.map((meaning, index) => {
         if (index >= 0 && index < 3) {
           return (

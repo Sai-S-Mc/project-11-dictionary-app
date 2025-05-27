@@ -36,7 +36,8 @@ export default function SearchResults({ results }) {
             return (
               <ResultBlock
                 result={result}
-                index={index}
+                index ={index}
+                key ={index}
                 word={word}
                 phonetic={phonetic}
                 pronunciation={pronunciation.pronunciationUrl}
