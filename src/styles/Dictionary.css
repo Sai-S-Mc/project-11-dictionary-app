@@ -30,7 +30,7 @@
 
 .Dictionary .search-btn {
   background-color: #a68576;
-  border: 1px solid #a68576;
+  outline: 1px solid #a68576;
   color: white;
   transition: all ease-in-out 400ms;
 }
@@ -39,4 +39,8 @@
   color: var(--primary-text-color);
   background-color: #ffffff;
   transform: rotateX(360deg);
+}
+
+.Dictionary .SearchResults{
+    margin-left: 10px;
 }

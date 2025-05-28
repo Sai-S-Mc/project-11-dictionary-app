@@ -1,5 +1,8 @@
 import { useState, useRef, useEffect } from "react";
 import DefinitionBlock from "./DefinitionBlock";
+import "../styles/ResultBlock.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faHeadphones } from "@fortawesome/free-solid-svg-icons";
 
 export default function ResultBlock({
   result,
@@ -12,7 +15,7 @@ export default function ResultBlock({
   const audioRef = useRef(null);
 
   useEffect(() => {
-    setAudioUrl(pronunciation)
+    setAudioUrl(pronunciation);
   }, [result, pronunciation]);
 
   function playPronunciation() {
@@ -20,54 +23,57 @@ export default function ResultBlock({
       audioRef.current.play();
     }
   }
-  
+
   let audioButton = (
-    <span>
-      <button onClick={playPronunciation}>Listen</button>
+    <>
+      <button onClick={playPronunciation}>
+        <FontAwesomeIcon icon={faHeadphones} />
+      </button>
       <audio ref={audioRef} src={audioUrl}>
         Your browser does not support the audio element.
       </audio>
-    </span>
+    </>
   );
 
   let heading;
-   if(index === 0){
+  if (index === 0) {
     heading = (
       <div>
-        <h3 className="text-capitalize">{word}</h3>
-        <p>
-          {phonetic} {audioUrl !== "" ? audioButton : null}
-        </p>
+        <h3 className="text-capitalize mb-2">
+          {word} {audioUrl !== "" ? audioButton : null}
+        </h3>
+        <p className="phonetic mb-4">{phonetic}</p>{" "}
       </div>
     );
-   }
+  }
 
-
-  return (
-    <div className="ResultBlock">
-      {heading}
-      {result.meanings.map((meaning, index) => {
-        if (index >= 0 && index < 3) {
-          return (
-            <div className="meaning" key={index}>
-              <h4>{meaning.partOfSpeech}</h4>
-              <ul>
-                {meaning.definitions.map((definition, index) => {
-                  if (index >= 0 && index < 3) {
-                    return (
-                      <DefinitionBlock definition={definition} key={index} />
-                    );
-                  } else {
-                    return null;
-                  }
-                })}
-              </ul>
-            </div>
-          );
-        } else {
-          return null;
-        }
-      })}
-    </div>
-  );
+  if (index >= 0 && index < 2) {
+    return (
+      <div className="ResultBlock">
+        {heading}
+        {result.meanings.map((meaning, index) => {
+          if (index >= 0 && index < 2) {
+            return (
+              <div className="meaning" key={index}>
+                <h5>{meaning.partOfSpeech}</h5>
+                <ul>
+                  {meaning.definitions.map((definition, index) => {
+                    if (index >= 0 && index < 3) {
+                      return (
+                        <DefinitionBlock definition={definition} key={index} />
+                      );
+                    } else {
+                      return null;
+                    }
+                  })}
+                </ul>
+              </div>
+            );
+          } else {
+            return null;
+          }
+        })}
+      </div>
+    );
+  }
 }

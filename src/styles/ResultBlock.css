@@ -1,0 +1,36 @@
+.ResultBlock h3{
+    margin: 10px 0;
+}
+
+.ResultBlock .phonetic{
+    margin-right: 5px;
+    opacity: 0.6;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.ResultBlock button{
+    position: relative;
+    bottom: 1.5px;
+    font-size: 15px;
+    line-height: 1.5;
+    margin-left: 5px;
+    background-color: #a68576;
+    color: white;
+    padding: 5px 10px;
+    border-radius: var(--border-radius);
+    border: none;
+    box-shadow: var(--box-shadow);
+    transition: all ease-in-out 400ms;
+}
+
+.ResultBlock button:hover{
+    outline: 1px solid #a68576;
+    color: var(--primary-text-color);
+    background-color: #ffffff;
+}
+
+.ResultBlock .meaning{
+    margin-bottom: 35px;
+    margin-left: 10px;
+}

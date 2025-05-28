@@ -1,0 +1,6 @@
+.DefinitionSynonyms .synonym{
+    border: 1px solid #a68576;
+    margin: 0 3px;
+    padding: 0 5px;
+    border-radius: var(--border-radius);
+}

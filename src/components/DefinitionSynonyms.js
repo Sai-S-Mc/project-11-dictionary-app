@@ -1,11 +1,13 @@
+import "../styles/DefinitionSynonyms.css"
+
 export default function DefinitionSynonyms({ definition }) {
   if (definition.synonyms.length > 0) {
     return (
       <div className="DefinitionSynonyms">
         {" "}
-        Synonyms:
+        Synonyms :
         {definition.synonyms.map((synonym, index) => {
-          return <span className="btn" key={index}>{synonym}</span>;
+          return <span key={index} className="synonym">{synonym}</span>;
         })}
       </div>
     );
