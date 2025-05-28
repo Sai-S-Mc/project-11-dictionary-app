@@ -14,8 +14,7 @@ export default function Dictionary() {
   }
 
   function handlePhotoApiResponse(response) {
-    console.log(response.data);
-    setGallery(response.data);
+    setGallery(response.data.photos);
   }
 
   function captureInput(event) {

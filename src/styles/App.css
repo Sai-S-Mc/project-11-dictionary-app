@@ -1,7 +1,7 @@
 .App {
   /* perspective: 800px; */
 }
-.App .container {
+.App-container {
   margin: 60px auto;
   max-width: 900px;
   height:max-content;

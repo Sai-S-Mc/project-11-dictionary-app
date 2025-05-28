@@ -4,7 +4,7 @@ import Dictionary from "./Dictionary";
 function App() {
   return (
     <div className="App">
-      <div className="container">
+      <div className="App-container">
         <main>
           <Dictionary />
         </main>
