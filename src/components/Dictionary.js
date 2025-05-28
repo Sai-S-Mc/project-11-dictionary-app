@@ -1,14 +1,21 @@
 import { useState } from "react";
 import axios from "axios";
 import SearchResults from "./SearchResults";
-import "../styles/Dictionary.css"
+import "../styles/Dictionary.css";
+import DictionaryGallery from "./DictionaryGallery";
 
 export default function Dictionary() {
   const [word, setWord] = useState("Garden");
   const [results, setResults] = useState(null);
+  const [gallery, setGallery] = useState(null);
 
-  function handleApiResonse(response) {
+  function handleDictionaryApiResonse(response) {
     setResults(response.data);
+  }
+
+  function handlePhotoApiResponse(response) {
+    console.log(response.data);
+    setGallery(response.data);
   }
 
   function captureInput(event) {
@@ -19,10 +26,16 @@ export default function Dictionary() {
     if (event) {
       event.preventDefault();
     }
-    const apiUrl = ` https://api.dictionaryapi.dev/api/v2/entries/en/${word}`;
-    axios.get(apiUrl).then(handleApiResonse);
+    const dictionaryApiUrl = ` https://api.dictionaryapi.dev/api/v2/entries/en/${word}`;
+    axios.get(dictionaryApiUrl).then(handleDictionaryApiResonse);
+
+    const photoApiKey =
+      "097q3IUVfgl2wnJwIonu2YvTi1nTaAoS4tLLRlIs0HjHXYCxv0o5cHHc";
+    const headers = { Authorization: ` ${photoApiKey}` };
+    const photoApiUrl = `https://api.pexels.com/v1/search?query=${word}&per_page=9`;
+    axios.get(photoApiUrl, { headers: headers }).then(handlePhotoApiResponse);
   }
-  console.log(results)
+  console.log(results);
 
   if (results) {
     return (
@@ -37,11 +50,11 @@ export default function Dictionary() {
             defaultValue={word}
             onChange={captureInput}
             className="input-field"
-            
           />
           <input type="submit" value="Search" className="search-btn" />
         </form>
         <SearchResults results={results} />
+        <DictionaryGallery gallery={gallery} />
       </div>
     );
   } else {

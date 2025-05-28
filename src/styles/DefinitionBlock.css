@@ -1,5 +1,6 @@
 .DefinitionBlock .example {
   color: var(--secondary-text-color);
+  max-width: fit-content;
   border-left: 3px solid #a68576;
   background-color: rgb(175, 154, 148, 0.1);
   padding: 0 10px;
