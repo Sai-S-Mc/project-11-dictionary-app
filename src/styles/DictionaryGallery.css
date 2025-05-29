@@ -16,7 +16,7 @@
 
 .DictionaryGallery a {
   width: fit-content;
-  margin: 0 auto;
+  margin: 5px auto 0;
   color: var(--secondary-text-color);
   text-decoration: none;
   transition: all ease-in-out 300ms;
@@ -28,7 +28,13 @@
 .DictionaryGallery a:hover {
   color: var(--primary-text-color);
 }
-.DictionaryGallery a:hover >  span{
+.DictionaryGallery a:hover > span {
   font-weight: bold;
   text-decoration: dotted underline;
+}
+
+@media (max-width: 1250px) {
+  .DictionaryGallery a {
+    margin-top: 30px;
+  }
 }

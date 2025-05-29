@@ -39,28 +39,39 @@ export default function Dictionary() {
   if (results) {
     return (
       <div className="Dictionary">
-        <div className="row">
-          <div className="col-md-6 first-section-wrapper section-wrapper">
-            <section className="first">
-              <h1 className="text-center mt-3">Dictionary</h1>
-
-              <form onSubmit={handleSubmit}>
-                <input
-                  type="search"
-                  autoFocus
-                  placeholder="Type a word"
-                  defaultValue={word}
-                  onChange={captureInput}
-                  className="input-field"
-                />
-                <input type="submit" value="Search" className="search-btn" />
-              </form>
-              <SearchResults results={results} />
+        <div className="row section-row">
+          <div className="col-xl-6 first-section-wrapper section-wrapper">
+            <section className="first-outer">
+              <section className="first-middle">
+                <section className="first-inner">
+                  <h1 className="text-center mt-3">Dictionary</h1>
+                  <form onSubmit={handleSubmit}>
+                    <input
+                      type="search"
+                      autoFocus
+                      placeholder="Type a word"
+                      defaultValue={word}
+                      onChange={captureInput}
+                      className="input-field"
+                    />
+                    <input
+                      type="submit"
+                      value="Search"
+                      className="search-btn"
+                    />
+                  </form>
+                  <SearchResults results={results} />
+                </section>
+              </section>
             </section>
           </div>
-          <div className="col-md-6 second-section-wrapper section-wrapper">
-            <section className="second">
-              <DictionaryGallery gallery={gallery} />
+          <div className="col-xl-6 second-section-wrapper section-wrapper">
+            <section className="second-outer">
+              <section className="second-middle">
+                <section className="second-inner">
+                  <DictionaryGallery gallery={gallery} />
+                </section>
+              </section>
             </section>
           </div>
         </div>

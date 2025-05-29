@@ -40,52 +40,102 @@
   background-color: #ffffff;
   transform: rotateX(360deg);
 }
+.Dictionary .section-row {
+  border-left: 1px solid #a68576;
+  border-right: 1px solid #a68576;
+  border-radius: var(--border-radius);
+  box-shadow: 1px 0px 10px #a68576;
+}
 
 .Dictionary .section-wrapper {
-  /* background-color: #281108d3;
-  background-color: #391a05; */
   background-color: #3d2515;
   padding: 10px;
-  /* perspective: 1000px;
-  transform: rotateX(5deg); */
+  perspective: 1000px;
+}
+
+.Dictionary .first-section-wrapper,
+.Dictionary .second-section-wrapper {
+  border-top: 1px solid #6f4f37;
+  border-bottom: 1px solid #6f4f37;
 }
 
 .Dictionary .first-section-wrapper {
   padding-left: 60px;
-  padding-right: 2px;
-  border-radius: 5px 0px 0px 5px;
+  padding-right: 0px;
+  border-radius: 5px 25px 25px 5px;
+  box-shadow: 278px 0px 15px #3d2515;
 }
 .Dictionary .second-section-wrapper {
   padding-right: 60px;
-  padding-left: 2px;
-  border-radius: 0px 5px 5px 0px;
+  padding-left: 0px;
+  border-radius: 25px 5px 5px 25px;
+  box-shadow: -10px 0px 15px #3d2515;
+  perspective: 1000px;
 }
 
 .Dictionary section {
   min-height: 100vh;
   padding: 20px 40px;
-  /* transform: rotateY(-3deg); */
   height: 760px;
   background-color: rgb(254, 246, 229, 0.9);
 }
 
-.Dictionary section.first {
-  /* background-color: #f2dcb1;
-  background-color: #faeaca; */
+.Dictionary section.first-outer,
+.Dictionary section.first-middle,
+.Dictionary section.second-outer,
+.Dictionary section.second-middle {
+  border: 1px solid #00000090;
+}
+
+.Dictionary section.first-outer,
+.Dictionary section.first-middle {
+  border-left: thick double #00000090;
   border-radius: 5px 0px 0px 5px;
-  /* height: max-content; */
-  overflow: hidden;
-  border-right: 1px;
 }
-.Dictionary section.frst::before{
-  
-  box-shadow: 10px 0px 10px red ;
-}
-.Dictionary section.second {
+
+.Dictionary section.second-outer,
+.Dictionary section.second-middle {
+  border-right: thick double #00000090;
   border-radius: 0px 5px 5px 0px;
+}
+
+.Dictionary section.first-outer {
+  padding: 0 0 0 5px;
+}
+
+.Dictionary section.second-outer {
+  padding: 0 5px 0 0;
+}
+
+.Dictionary section.first-middle {
+  padding: 0 0 0 8px;
+}
+
+.Dictionary section.second-middle {
+  padding: 0 8px 0 0;
+}
+
+.Dictionary section.first-inner,
+.Dictionary section.second-inner {
+  border: 1px solid #00000090;
   overflow: hidden;
+}
+
+.Dictionary section.first-inner {
+  border-radius: 5px 0px 0px 5px;
+}
+
+.Dictionary section.second-inner {
+  transform: rotateY(-3deg);
+  border-radius: 0px 5px 5px 0px;
 }
 
 .Dictionary .SearchResults {
   margin-left: 10px;
+}
+
+@media (max-width: 1250px) {
+  .Dictionary form {
+    padding: 10px 0;
+  }
 }

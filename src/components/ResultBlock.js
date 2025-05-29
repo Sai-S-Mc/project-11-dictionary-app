@@ -58,7 +58,7 @@ export default function ResultBlock({
                 <h5>{meaning.partOfSpeech}</h5>
                 <ul>
                   {meaning.definitions.map((definition, index) => {
-                    if (index >= 0 && index < 3) {
+                    if (index >= 0 && index < 2) {
                       return (
                         <DefinitionBlock definition={definition} key={index} />
                       );
