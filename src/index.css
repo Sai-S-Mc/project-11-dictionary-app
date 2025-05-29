@@ -3,7 +3,7 @@
   --heading-color: #38180b;
   --primary-text-color: #75472a;
   --secondary-text-color: rgb(137, 82, 49, 0.8);
-  --box-shadow:2px 3px 10px rgb(56, 24, 11, 0.2);
+  --box-shadow: 2px 3px 10px rgb(56, 24, 11, 0.2);
 }
 
 body {
@@ -11,25 +11,11 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: linear-gradient(
-    rgb(56, 24, 11, 0.5),
-    rgb(56, 24, 11, 0.8),
-    rgb(56, 24, 11, 0.9)
-  ),
-  url(../assets/body-bg.jpg);
-  /* background: linear-gradient(
-    rgb(73, 44, 42,0.5),
-    rgb(73, 44, 42, 0.8),
-    rgb(73, 44, 42, 0.9)
-  ),
-  url(../assets/body-bg.jpg);
-  background: linear-gradient(
-    rgb(89, 59, 57,0.5),
-    rgb(89, 59, 57, 0.8),
-    rgb(89, 59, 57, 0.9)
-  ),
-  url(../assets/body-bg.jpg); */
-
-
+      rgb(56, 24, 11, 0.5),
+      rgb(56, 24, 11, 0.8),
+      rgb(56, 24, 11, 0.9)
+    ),
+    url(../assets/body-bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;

@@ -7,7 +7,6 @@
   font-size: smaller;
   height: max-content;
   min-height: 100vh;
-  perspective: 1000px;
 }
 
 .App h1,
@@ -21,24 +20,27 @@ h6 {
   opacity: 0.9;
 }
 
+.App .footer-wrapper,
+.App footer {
+  padding: 10px 20px;
+  border-radius: var(--border-radius);
+}
+
 .App .footer-wrapper {
   border-left: 1px solid #a68576;
   border-right: 1px solid #a68576;
   box-shadow: 1px 0px 10px #a68576;
   background-color: #3d2515;
   margin-top: 60px;
-  padding: 10px 20px;
-  border-radius: var(--border-radius);
   text-align: center;
 }
 
 .App footer {
-  border-radius: var(--border-radius);
   background-color: rgb(254, 246, 229, 0.9);
-  padding: 10px 20px;
   color: var(--secondary-text-color);
   transition: all ease-in-out 500ms;
 }
+
 .App footer:hover {
   font-weight: 600;
 }
@@ -58,8 +60,8 @@ h6 {
   color: #502b12;
 }
 
-@media (max-width: 1250px){
-  .App h1{
+@media (max-width: 1250px) {
+  .App h1 {
     margin-top: 0 !important;
   }
 }
