@@ -22,6 +22,9 @@ export default function DictionaryGallery({ gallery }) {
               </div>
             );
           })}
+          <a href="https://www.pexels.com" target="_blank" rel="noreferrer">
+            Photos provided by <span>Pexels</span>
+          </a>
         </div>
       </div>
     );

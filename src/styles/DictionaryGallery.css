@@ -1,6 +1,6 @@
- .container {
+/* .container {
   padding: 50px 0;
-}
+} */
 
 .DictionaryGallery .photo {
   padding: 15px;
@@ -12,4 +12,23 @@
 }
 .DictionaryGallery img:hover {
   border-radius: var(--border-radius);
+}
+
+.DictionaryGallery a {
+  width: fit-content;
+  margin: 0 auto;
+  color: var(--secondary-text-color);
+  text-decoration: none;
+  transition: all ease-in-out 300ms;
+}
+.DictionaryGallery a span {
+  transition: all ease-in-out 300ms;
+  color: var(--primary-text-color);
+}
+.DictionaryGallery a:hover {
+  color: var(--primary-text-color);
+}
+.DictionaryGallery a:hover >  span{
+  font-weight: bold;
+  text-decoration: dotted underline;
 }
