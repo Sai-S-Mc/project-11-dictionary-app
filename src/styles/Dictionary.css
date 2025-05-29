@@ -41,6 +41,51 @@
   transform: rotateX(360deg);
 }
 
-.Dictionary .SearchResults{
-    margin-left: 10px;
+.Dictionary .section-wrapper {
+  background-color: #281108d3;
+  background-color: #391a05;
+  background-color: #3d2515;
+  padding: 10px;
+  /* perspective: 1000px;
+  transform: rotateX(5deg); */
+}
+
+.Dictionary .first-section-wrapper {
+  padding-left: 60px;
+  padding-right: 2px;
+  border-radius: 5px 0px 0px 5px;
+}
+.Dictionary .second-section-wrapper {
+  padding-right: 60px;
+  padding-left: 2px;
+  border-radius: 0px 5px 5px 0px;
+}
+
+.Dictionary section {
+  min-height: 100vh;
+  padding: 20px 40px;
+  /* transform: rotateY(-3deg); */
+  height: 760px;
+  background-color: rgb(254, 246, 229, 0.9);
+}
+
+.Dictionary section.first {
+  /* background-color: #f2dcb1;
+  background-color: #faeaca; */
+  border-radius: 5px 0px 0px 5px;
+  /* height: max-content; */
+  overflow: hidden;
+  border-right: 1px;
+}
+.Dictionary section.frst::before{
+  
+  box-shadow: 10px 0px 10px red ;
+}
+.Dictionary section.second {
+  border-radius: 0px 5px 5px 0px;
+  overflow: hidden;
+}
+
+.Dictionary .SearchResults {
+  margin-left: 10px;
 }

@@ -1,32 +1,20 @@
 .App {
-  /* perspective: 800px; */
 }
 .App-container {
-  margin: 60px auto;
-  max-width: 900px;
-  height:max-content;
-  min-height: 100vh;
-  width: 80%;
+  margin: 80px auto 100px;
+  max-width: 1200px;
+  width: 90%;
   font-family: "Open Sans", sans-serif;
-  background-color: #281108d3;
-  padding: 10px;
-  padding-left: 60px;
-  border-radius: var(--border-radius);
   color: var(--primary-text-color);
   font-size: smaller;
-  /* perspective: 1000px;
-  transform: rotateX(5deg); */
+  height:max-content;
+  min-height: 100vh;
+  perspective: 800px;
+  
 }
 
 .App main {
-  border-radius: 5px 0px 0px 5px;
-  min-height: 100vh;
-  height: max-content;
-  padding: 20px 40px;
-  /* background-color: #f2dcb1;
-  background-color: #faeaca; */
-  background-color: #fef6e5;
-  /* transform: rotateY(-3deg); */
+ 
 }
 .App h1,
 h2,

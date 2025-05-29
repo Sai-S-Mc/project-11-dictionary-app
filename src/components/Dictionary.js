@@ -31,7 +31,7 @@ export default function Dictionary() {
     const photoApiKey =
       "097q3IUVfgl2wnJwIonu2YvTi1nTaAoS4tLLRlIs0HjHXYCxv0o5cHHc";
     const headers = { Authorization: ` ${photoApiKey}` };
-    const photoApiUrl = `https://api.pexels.com/v1/search?query=${word}&per_page=9`;
+    const photoApiUrl = `https://api.pexels.com/v1/search?query=${word}&per_page=8`;
     axios.get(photoApiUrl, { headers: headers }).then(handlePhotoApiResponse);
   }
   console.log(results);
@@ -39,21 +39,31 @@ export default function Dictionary() {
   if (results) {
     return (
       <div className="Dictionary">
-        <h1 className="text-center mt-3">Dictionary</h1>
+        <div className="row">
+          <div className="col-md-6 first-section-wrapper section-wrapper">
+            <section className="first">
+              <h1 className="text-center mt-3">Dictionary</h1>
 
-        <form onSubmit={handleSubmit}>
-          <input
-            type="search"
-            autoFocus
-            placeholder="Type a word"
-            defaultValue={word}
-            onChange={captureInput}
-            className="input-field"
-          />
-          <input type="submit" value="Search" className="search-btn" />
-        </form>
-        <SearchResults results={results} />
-        <DictionaryGallery gallery={gallery} />
+              <form onSubmit={handleSubmit}>
+                <input
+                  type="search"
+                  autoFocus
+                  placeholder="Type a word"
+                  defaultValue={word}
+                  onChange={captureInput}
+                  className="input-field"
+                />
+                <input type="submit" value="Search" className="search-btn" />
+              </form>
+              <SearchResults results={results} />
+            </section>
+          </div>
+          <div className="col-md-6 second-section-wrapper section-wrapper">
+            <section className="second">
+              <DictionaryGallery gallery={gallery} />
+            </section>
+          </div>
+        </div>
       </div>
     );
   } else {

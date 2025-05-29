@@ -5,9 +5,7 @@ function App() {
   return (
     <div className="App">
       <div className="App-container">
-        <main>
-          <Dictionary />
-        </main>
+        <Dictionary />
         <footer>
           This dictionary app was designed and coded by{" "}
           <a
