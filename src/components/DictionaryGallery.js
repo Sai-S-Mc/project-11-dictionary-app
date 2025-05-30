@@ -32,6 +32,7 @@ export default function DictionaryGallery({ gallery }) {
             target="_blank"
             rel="noreferrer"
             title= "Click to head to Pexels website"
+            className="text-center"
           >
             Photos provided by <span>Pexels</span>
           </a>
