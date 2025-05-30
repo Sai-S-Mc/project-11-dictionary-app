@@ -40,3 +40,8 @@
         margin-bottom: 6px !important;
     }
 }
+@media (max-width:1199.5px) {
+    .ResultBlock .phonetic{
+        margin-bottom: 15px !important;
+    }
+}

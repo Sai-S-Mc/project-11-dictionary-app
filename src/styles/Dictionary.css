@@ -138,3 +138,79 @@
     padding: 10px 0;
   }
 }
+
+@media (max-width: 1199.5px) {
+  .Dictionary .section-row {
+    border-top: 1px solid #a68576;
+    border-bottom: 1px solid #a68576;
+  }
+
+  .Dictionary .first-section-wrapper,
+  .Dictionary .second-section-wrapper {
+    border-left: 1px solid #6f4f37;
+    border-right: 1px solid #6f4f37;
+    padding: 10px;
+  }
+
+  .Dictionary .first-section-wrapper {
+    padding-top: 40px;
+    padding-bottom: 0px;
+    border-radius: 5px 5px 25px 25px;
+    box-shadow: 0px 278px 15px #3d2515;
+  }
+  .Dictionary .second-section-wrapper {
+    padding-bottom: 40px;
+    padding-top: 0px;
+    border-radius: 25px 25px 5px 5px;
+    box-shadow: 0px -10px 15px #3d2515;
+  }
+
+  .Dictionary section {
+    min-height: 100vh;
+    height: fit-content;
+  }
+
+  .Dictionary section.first-outer,
+  .Dictionary section.first-middle,
+  .Dictionary section.second-outer,
+  .Dictionary section.second-middle {
+    border: 1px solid #00000090;
+  }
+
+  .Dictionary section.first-outer,
+  .Dictionary section.first-middle {
+    border-top: thick double #00000090;
+    border-radius: 5px 5px 0px 0px;
+  }
+
+  .Dictionary section.second-outer,
+  .Dictionary section.second-middle {
+    border-bottom: thick double #00000090;
+    border-radius: 0px 0px 5px 5px;
+  }
+
+  .Dictionary section.first-outer {
+    padding: 5px 0 0 0;
+  }
+
+  .Dictionary section.second-outer {
+    padding: 0 0 5px 0;
+  }
+
+  .Dictionary section.first-middle {
+    padding: 8px 0 0 0;
+  }
+
+  .Dictionary section.second-middle {
+    padding: 0 0 8px 0;
+  }
+
+  .Dictionary section.first-inner {
+    border-radius: 5px 5px 0px 0px;
+  }
+
+  .Dictionary section.second-inner {
+    transform: rotateY(-3deg);
+    border-radius: 0px 0px 5px 5px;
+  }
+}
