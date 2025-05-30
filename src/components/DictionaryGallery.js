@@ -11,7 +11,12 @@ export default function DictionaryGallery({ gallery }) {
             credit = `Credit : ${photo.photographer} `;
             return (
               <div className="photo col-sm-6" key={index}>
-                <a href={photo.url} target="_blank" rel="noreferrer">
+                <a
+                  href={photo.url}
+                  target="_blank"
+                  rel="noreferrer"
+                  title={photo.url}
+                >
                   <img
                     src={photo.src.tiny}
                     alt={photo.alt}
@@ -22,7 +27,12 @@ export default function DictionaryGallery({ gallery }) {
               </div>
             );
           })}
-          <a href="https://www.pexels.com" target="_blank" rel="noreferrer">
+          <a
+            href="https://www.pexels.com"
+            target="_blank"
+            rel="noreferrer"
+            title= "Click to head to Pexels website"
+          >
             Photos provided by <span>Pexels</span>
           </a>
         </div>

@@ -13,6 +13,7 @@ function App() {
               href="https://github.com/Sai-S-Mc"
               target="_blank"
               rel="noreferrer"
+              title="Sai's GitHub Profile"
             >
               Sai Satti
             </a>{" "}
@@ -21,7 +22,8 @@ function App() {
               href="https://github.com/Sai-S-Mc/project-11-dictionary-app"
               target="_blank"
               rel="noreferrer"
-            >
+              title="Sai's GitHub repository"
+              >
               open-sourced on GitHub
             </a>{" "}
             and hosted on{" "}
@@ -29,7 +31,8 @@ function App() {
               href="https://project-11-dictionary-app.netlify.app/"
               target="_blank"
               rel="noreferrer"
-            >
+              title="Sai's project on Netlify"
+              >
               Netlify
             </a>
           </footer>
