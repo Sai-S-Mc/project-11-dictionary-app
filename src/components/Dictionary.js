@@ -5,7 +5,7 @@ import "../styles/Dictionary.css";
 import DictionaryGallery from "./DictionaryGallery";
 
 export default function Dictionary() {
-  const [word, setWord] = useState("Garden");
+  const [word, setWord] = useState("Brown");
   const [results, setResults] = useState(null);
   const [gallery, setGallery] = useState(null);
 
@@ -48,7 +48,7 @@ export default function Dictionary() {
                   <form onSubmit={handleSubmit}>
                     <input
                       type="search"
-                      placeholder="Type a word"
+                      placeholder="word inspo: code, galaxy..."
                       defaultValue={word}
                       onChange={captureInput}
                       className="input-field"
