@@ -68,7 +68,7 @@ h6 {
 
 @media (max-width: 1199.5px) {
   .App-container{
-    width: 85%;
+    max-width: 85%;
   }
 
   .App h1 {

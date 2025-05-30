@@ -45,3 +45,10 @@
         margin-bottom: 15px !important;
     }
 }
+@media (max-width:500px) {
+    .ResultBlock .meaning{
+        margin-bottom: 35px;
+        margin-left: 0;
+    }
+    
+}

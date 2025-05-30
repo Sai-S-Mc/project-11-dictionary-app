@@ -214,3 +214,21 @@
     border-radius: 0px 0px 5px 5px;
   }
 }
+
+
+@media (max-width:500px) {
+  .Dictionary .SearchResults {
+    margin-left: 0;
+  }
+
+  .Dictionary  .input-field{
+    text-align: center;
+    margin-right: 0;
+  }
+
+  .Dictionary  .search-btn {
+    display: block;
+    margin: 10px auto;
+  }
+
+}
