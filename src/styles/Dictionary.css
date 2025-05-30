@@ -215,20 +215,23 @@
   }
 }
 
-
-@media (max-width:500px) {
+@media (max-width: 500px) {
   .Dictionary .SearchResults {
     margin-left: 0;
   }
 
-  .Dictionary  .input-field{
+  .Dictionary .input-field {
     text-align: center;
     margin-right: 0;
+    max-width: 80%;
   }
 
-  .Dictionary  .search-btn {
+  .Dictionary .search-btn {
     display: block;
     margin: 10px auto;
   }
-
+  
+  .Dictionary section {
+    padding: 20px;
+  }
 }
