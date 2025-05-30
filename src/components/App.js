@@ -1,6 +1,9 @@
 import "../styles/App.css";
 import Dictionary from "./Dictionary";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBook } from "@fortawesome/free-solid-svg-icons";
+
 function App() {
   return (
     <div className="App">
@@ -8,7 +11,9 @@ function App() {
         <Dictionary />
         <div className="footer-wrapper">
           <footer>
-            This dictionary app was designed and coded by{" "}
+            This dictionary app{" "}
+            <FontAwesomeIcon icon={faBook} className="icon" /> was designed and
+            coded by{" "}
             <a
               href="https://github.com/Sai-S-Mc"
               target="_blank"
@@ -23,7 +28,7 @@ function App() {
               target="_blank"
               rel="noreferrer"
               title="Sai's GitHub repository"
-              >
+            >
               open-sourced on GitHub
             </a>{" "}
             and hosted on{" "}
@@ -32,7 +37,7 @@ function App() {
               target="_blank"
               rel="noreferrer"
               title="Sai's project on Netlify"
-              >
+            >
               Netlify
             </a>
           </footer>
