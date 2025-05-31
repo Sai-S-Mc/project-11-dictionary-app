@@ -34,7 +34,6 @@ export default function Dictionary() {
     const photoApiUrl = `https://api.pexels.com/v1/search?query=${word}&per_page=8`;
     axios.get(photoApiUrl, { headers: headers }).then(handlePhotoApiResponse);
   }
-  console.log(results);
 
   if (results) {
     return (

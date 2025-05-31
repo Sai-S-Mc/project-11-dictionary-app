@@ -1,7 +1,6 @@
 import "../styles/DictionaryGallery.css";
 
 export default function DictionaryGallery({ gallery }) {
-  console.log(gallery);
   if (gallery) {
     let credit;
     return (
