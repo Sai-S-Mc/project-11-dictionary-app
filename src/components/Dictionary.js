@@ -26,7 +26,14 @@ export default function Dictionary() {
       event.preventDefault();
     }
     const dictionaryApiUrl = ` https://api.dictionaryapi.dev/api/v2/entries/en/${word}`;
-    axios.get(dictionaryApiUrl).then(handleDictionaryApiResonse);
+    axios.get(dictionaryApiUrl).then(handleDictionaryApiResonse).catch(()=>{
+      alert(
+        "Sorry, we couldn't find that word. Please try another one. Meanwhile, here's some kittens😺!"
+      );
+      setWord("Kitten");
+      setGallery(null)
+      setResults(null)
+    });
 
     const photoApiKey =
       "097q3IUVfgl2wnJwIonu2YvTi1nTaAoS4tLLRlIs0HjHXYCxv0o5cHHc";
