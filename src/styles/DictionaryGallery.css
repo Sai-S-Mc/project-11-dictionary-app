@@ -13,27 +13,27 @@
   border-radius: var(--border-radius);
 }
 
-.DictionaryGallery a {
-  width: fit-content;
+.DictionaryGallery .pexels-link {
+  display: block;
   margin: 5px auto 0;
   color: var(--secondary-text-color);
   text-decoration: none;
   transition: all ease-in-out 300ms;
 }
-.DictionaryGallery a span {
+.DictionaryGallery .pexels-link span {
   transition: all ease-in-out 300ms;
   color: var(--primary-text-color);
 }
-.DictionaryGallery a:hover {
+.DictionaryGallery .pexels-link:hover {
   color: var(--primary-text-color);
 }
-.DictionaryGallery a:hover > span {
+.DictionaryGallery .pexels-link:hover > span {
   font-weight: bold;
   text-decoration: dotted underline;
 }
 
 @media (max-width: 1250px) {
-  .DictionaryGallery a {
+  .DictionaryGallery .pexels-link {
     margin-top: 30px;
   }
 }
