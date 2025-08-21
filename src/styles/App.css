@@ -60,6 +60,10 @@ h6 {
   color: #502b12;
 }
 
+.App .copyright {
+  font-family: "Roboto", sans-serif;
+}
+
 @media (max-width: 1250px) {
   .App h1 {
     margin-top: 0 !important;
