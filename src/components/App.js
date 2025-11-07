@@ -40,7 +40,7 @@ function App() {
             >
               Netlify
             </a>
-            <p class="mb-0 pt-2 copyright">
+            <p className="mb-0 pt-2 copyright">
               Copyright ©2025 Sai Satti. All rights reserved.
             </p>
           </footer>

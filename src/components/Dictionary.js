@@ -50,7 +50,7 @@ export default function Dictionary() {
             <section className="first-outer">
               <section className="first-middle">
                 <section className="first-inner">
-                  <h1 className="text-center mt-3">Dictionary</h1>
+                  <h1 className="text-center">Dictionary</h1>
                   <form onSubmit={handleSubmit}>
                     <input
                       type="search"
