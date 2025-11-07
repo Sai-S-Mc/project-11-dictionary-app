@@ -26,7 +26,7 @@ export default function ResultBlock({
 
   let audioButton = (
     <>
-      <button onClick={playPronunciation}>
+      <button onClick={playPronunciation} aria-label="Listen to pronunciation">
         <FontAwesomeIcon icon={faHeadphones} />
       </button>
       <audio ref={audioRef} src={audioUrl}>
@@ -39,9 +39,9 @@ export default function ResultBlock({
   if (index === 0) {
     heading = (
       <div>
-        <h3 className="text-capitalize mb-2">
+        <h2 className="text-capitalize mt-5 mb-2">
           {word} {audioUrl !== "" ? audioButton : null}
-        </h3>
+        </h2>
         <p className="phonetic mb-4">{phonetic}</p>{" "}
       </div>
     );
@@ -55,7 +55,7 @@ export default function ResultBlock({
           if (index >= 0 && index < 2) {
             return (
               <div className="meaning" key={index}>
-                <h5>{meaning.partOfSpeech}</h5>
+                <h3>{meaning.partOfSpeech}</h3>
                 <ul>
                   {meaning.definitions.map((definition, index) => {
                     if (index >= 0 && index < 2) {

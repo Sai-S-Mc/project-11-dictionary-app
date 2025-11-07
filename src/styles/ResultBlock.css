@@ -1,5 +1,6 @@
-.ResultBlock h3{
+.ResultBlock h2{
     margin: 10px 0;
+    font-size: 25px;
 }
 
 .ResultBlock .phonetic{
@@ -33,6 +34,10 @@
 .ResultBlock .meaning{
     margin-bottom: 35px;
     margin-left: 10px;
+}
+
+.ResultBlock .meaning h3{
+    font-size: 20px;
 }
 
 @media (max-width:1250px) {

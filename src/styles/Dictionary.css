@@ -73,8 +73,8 @@
 }
 
 .Dictionary section {
+  padding: 20px 40px ;
   min-height: 100vh;
-  padding: 20px 40px;
   height: 760px;
   background-color: rgb(254, 246, 229, 0.9);
 }
@@ -117,8 +117,11 @@
 .Dictionary section.first-inner,
 .Dictionary section.second-inner {
   border: 1px solid #00000090;
-  overflow: hidden;
-}
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}   
 
 .Dictionary section.first-inner {
   border-radius: 5px 0px 0px 5px;
@@ -230,7 +233,7 @@
     display: block;
     margin: 10px auto;
   }
-  
+
   .Dictionary section {
     padding: 20px;
   }
